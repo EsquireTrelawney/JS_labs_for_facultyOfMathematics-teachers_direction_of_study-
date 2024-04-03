@@ -1,0 +1,131 @@
+<html>
+<head>
+    <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+.button {
+  /* Сбрасываем дефолтные стили */
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* Можно также использовать любые встроенные и кастомные шрифты, например, отсюда  */
+  font-family: Roboto, Verdana, Tahoma, sans,serif;
+  /* Тут можно поэкспериментировать */
+  padding: 12px 16px;
+  border-radius: 100px;
+  color: #ffffff;
+}
+.button i {
+  margin-right: 4px;
+}
+.button + .button {
+  margin-left: 6px;
+}
+.button.blue {
+  background: #2196F3;
+}
+.button.purple {
+  background: #9b59b6;
+}
+.button.yellow {
+  background: #e4d508;
+  color: #1a0909;
+}
+.button.orange {
+  background: #e49605;
+  color: #1a0909;
+}
+.button:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:hover.blue {
+  background: #39a1f4;
+}
+.button:hover.purple {
+  background: #a66bbe;
+}
+.button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:active.blue {
+  background: #0d8aee;
+}
+.button:active.purple {
+  background: #8f4bab;
+}
+    </style>
+<title> Лабораторная работа 11 </title>
+
+<script src="васильченко12.js">
+</script>
+</head>
+
+<body background="bg.jpg" onload = slide()>
+<center>
+<h1 style="background-color:rgb(185, 214, 243); width:fit-content; border-style:dashed; border-radius: 15px; border-color: #ffe969;">Лабораторная работа №12 <br> Добро пожаловать! <br>
+</center>
+</h1>
+<center>
+<img id="slideshow_place" src="loading.jpg" height="500" onmouseover="zoom()"onmouseout="zoom1()" onclick="zoom2()" border="5px">
+<!-- можно предположить, что свойство height использовано для фиксированного размера картинки по высоте, чтобы кнопки "Не съезжали" вниз при смене картинок -->
+<br><br>
+
+<button id="login" class="button blue" onclick="slideshow_set_faster()">
+    <i class="fa fa-plus"></i>
+    <span>Быстрее(-0,5 c) </span>
+</button>
+  
+<button id="login" class="button purple" onclick="slideshow_set_slower()">
+    <i class="fa fa-minus"></i>
+    <span>Медленнее(+0,5 c)</span>
+</button>
+
+<button id="login" class="button yellow" onclick="slideshow_speed(1000)">
+    <i class="fa fa-clock"></i>
+    <span>Интервал в 1 с</span>
+</button>
+
+<button id="login" class="button yellow" onclick="slideshow_speed(5000)">
+    <i class="fa fa-clock"></i>
+    <span>Интервал в 5 с</span>
+</button>
+
+<button id="login" class="button yellow" onclick="slideshow_speed(10000)">
+    <i class="fa fa-clock"></i>
+    <span>Интервал в 10 с</span>
+</button>
+</center>
+
+<center>
+    <h1><br> Каталог видеокарт для настольного компьютера<br></h1>
+    <h2> Отметьте нужный вам товар: </h2>
+</center>
+<h3 alight="left">
+    <input type="checkbox" id="product1" value="3999"> MSI GeForce 210 - 3 999 руб. <br>
+    <input type="checkbox" id="product2" value="5899"> Palit GeForce GT 1030 - 5 899 руб. <br>
+    <input type="checkbox" id="product3" value="6199"> PowerColor AMD Radeon RX 550 LP - 6199 руб. <br>
+    <input type="checkbox" id="product4" value="7399"> GIGABYTE GeForce GT 1030 - 7 399 руб. <br>
+    <input type="checkbox" id="product5" value="12999"> Colorful GeForce GTX 1050 Ti - 12 999 руб. <br>
+    <input type="checkbox" id="product6" value="13299"> MSI Radeon RX 6400 AERO ITX - 13 299 руб. <br>
+    <input type="checkbox" id="product7" value="18499"> ASUS Dual Radeon RX 6500 XT - 18 499 руб. <br>
+    <input type="checkbox" id="product8" value="28499"> ASUS Dual GeForce RTX 2060 OC EVO - 28 499 руб. <br>
+    <input type="checkbox" id="product9" value="30999"> GIGABYTE AMD Radeon RX 66500 XT - 30 999 руб.<br>
+    <input type="checkbox" id="product10" value="39499"> KFA2 GeForce RTX 3060 Ti CORE - 39 499 руб. <br>
+    
+    <br>
+    <button id="login" class="button yellow" onclick="count1()">
+        <i class="fa fa-credit-card"></i>
+        <span>Рассчитать стоимость</span>
+    </button>
+    <br>
+    Итого:
+    <input id="total">
+
+</h3>
+
+</body>
+</html>

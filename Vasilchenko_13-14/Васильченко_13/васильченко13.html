@@ -1,0 +1,86 @@
+﻿<html lang="ru">
+<head>
+<title> Лабораторная работа 13 </title>
+<link rel="stylesheet" href="lab_styles.css">
+<script src="Васильченко13.js"> </script>
+
+</head>
+<body>
+<div class="title_of_work"> Лабораторная работа №13 </div>
+<br>
+<div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+</div>
+
+<table class="table_blur">
+<tr>
+    <td>Наименование</td>
+    <td>Количество</td>
+    <td>Вес единицы</td>
+    <td>1-й грузовик</td>
+    <td>2-й грузовик</td>
+    <td>3-й грузовик</td>
+</tr>
+<tr>
+    <td>Станки</td>
+    <td id="amount_1">11</td>
+    <td id="weight_1">850</td>
+    <td><input  id="amount_1_1" size="6" onBlur="calculate()"></td>
+    <td><input  id="amount_1_2" size="6" onBlur="calculate()"></td>
+    <td id="amount_1_3"></td>
+</tr>
+<tr>
+    <td>Трубы</td>
+    <td id="amount_2">4</td>
+    <td id="weight_2">1930</td>
+    <td><input  id="amount_2_1" size="6" onBlur="calculate()"></td>
+    <td><input  id="amount_2_2" size="6" onBlur="calculate()"></td>
+    <td id="amount_2_3"></td>
+</tr>
+<tr>
+    <td>Буровое оборудование</td>
+    <td id="amount_3">2</td>
+    <td id="weight_3">1700</td>
+    <td><input  id="amount_3_1" size="6" onBlur="calculate()"></td>
+    <td><input  id="amount_3_2" size="6" onBlur="calculate()"></td>
+    <td id="amount_3_3"></td>
+    </tr>
+<tr>
+    <td>Отделочный камень</td>
+    <td id="amount_4">4</td>
+    <td id="weight_4">1250</td>
+    <td><input  id="amount_4_1" size="6" onBlur="calculate()"></td>
+    <td><input  id="amount_4_2" size="6" onBlur="calculate()"></td>
+    <td id="amount_4_3"></td>
+</tr>
+<tr>
+    <td>Промышленные электромоторы</td>
+    <td id="amount_5">7</td>
+    <td id="weight_5">730</td>
+    <td><input  id="amount_5_1" size="6" onBlur="calculate()"></td>
+    <td><input  id="amount_5_2" size="6" onBlur="calculate()"></td>
+    <td id="amount_5_3"></td>
+</tr>
+<tr>
+    <td>Кабель</td>
+    <td id="amount_6">5</td>
+    <td id="weight_6">1100</td>
+    <td><input  id="amount_6_1" size="6" onBlur="calculate()"></td>
+    <td><input  id="amount_6_2" size="6" onBlur="calculate()"></td>
+    <td id="amount_6_3"></td>
+</tr>
+<tr>
+    <td colspan="2"><input type="button" class="button-3" value="Рассчитать" onClick="calculate()"></td>
+    <td>Вес груза в машине:</td>
+    <td id="total_weight_truck1"></td>
+    <td id="total_weight_truck2"></td>
+    <td id="total_weight_truck3"></td>
+</tr>
+</table>
+<br><br>
+<center><button class="button-3" type="button" onclick=rand_amount_for1_2_truck()>Случайное кол-во для 1 и 2 грузовика</button></center>
+
+</body>
+</html>

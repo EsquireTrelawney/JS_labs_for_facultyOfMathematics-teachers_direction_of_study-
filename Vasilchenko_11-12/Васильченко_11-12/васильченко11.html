@@ -1,0 +1,107 @@
+﻿<html>
+<head>
+    <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+.button {
+  /* Сбрасываем дефолтные стили */
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* Можно также использовать любые встроенные и кастомные шрифты, например, отсюда  */
+  font-family: Roboto, Verdana, Tahoma, sans;
+  /* Тут можно поэкспериментировать */
+  padding: 12px 16px;
+  border-radius: 100px;
+  color: #ffffff;
+}
+.button i {
+  margin-right: 4px;
+}
+.button + .button {
+  margin-left: 6px;
+}
+.button.blue {
+  background: #2196F3;
+}
+.button.purple {
+  background: #9b59b6;
+}
+.button.yellow {
+  background: #e4d508;
+  color: #1a0909;
+}
+.button.orange {
+  background: #e49605;
+  color: #1a0909;
+}
+.button:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:hover.blue {
+  background: #39a1f4;
+}
+.button:hover.purple {
+  background: #a66bbe;
+}
+.button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:active.blue {
+  background: #0d8aee;
+}
+.button:active.purple {
+  background: #8f4bab;
+}
+    </style>
+<title> Лабораторная работа 11 </title>
+
+<script src="васильченко11.js">
+</script>
+</head>
+
+<body background="https://dizain.guru/wp-content/uploads/2015/03/lavandovyy.jpg" onload = slide()>
+<center>
+<h1>
+Лабораторная работа №11. <br> Добро пожаловать! <br>
+Как насчёт того, чтобы взглянуть на некоторые горы Краснодарского края?
+<br>
+</center>
+</h1> <br>
+<center>
+<img id="slideshow_place" src="main.jpg" height="500" onmouseover="zoom()"onmouseout="zoom1()" onclick="zoom2()" border="5px">
+<!-- можно предположить, что свойство height использовано для фиксированного размера картинки по высоте, чтобы кнопки "Не съезжали" вниз при смене картинок -->
+<br><br>
+
+<button id="login" class="button blue" onclick="slideshow_set_faster()">
+    <i class="fa fa-plus"></i>
+    <span>Быстрее(-0,5 c) </span>
+</button>
+  
+<button id="login" class="button purple" onclick="slideshow_set_slower()">
+    <i class="fa fa-minus"></i>
+    <span>Медленнее(+0,5 c)</span>
+</button>
+
+<button id="login" class="button yellow" onclick="slideshow_speed(1000)">
+    <i class="fa fa-clock"></i>
+    <span>Интервал в 1 с</span>
+</button>
+
+<button id="login" class="button yellow" onclick="slideshow_speed(5000)">
+    <i class="fa fa-clock"></i>
+    <span>Интервал в 5 с</span>
+</button>
+
+<button id="login" class="button yellow" onclick="slideshow_speed(10000)">
+    <i class="fa fa-clock"></i>
+    <span>Интервал в 10 с</span>
+</button>
+</center>
+
+</body>
+</html>
